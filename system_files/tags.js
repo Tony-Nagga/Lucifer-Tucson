@@ -24,7 +24,7 @@ exports.get = () => {
 	"DS": "Сотрудник Автошколы",
 	"GOV": "Сотрудник Правительствa",
 
-	"Yakuza": "Yаkuzа",
+	"Yakuza": "Член мафии Yаkuzа",
 	"WMC": "Warlock MC",
 	"LCN": "La Cosa Nostra",
 	"RM": "Russian Mafia",
