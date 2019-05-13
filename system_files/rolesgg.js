@@ -19,7 +19,7 @@ exports.get = () => {
 		"Сотрудник Банка LS",
 		"Сотрудник Автошколы",
 		"Сотрудник Правительствa",
-		"Yakuzа",
+		"Якудза",
 		"Warlock MC",
 		"La Cosa Nostra",
 		"Russian Mafia" 
