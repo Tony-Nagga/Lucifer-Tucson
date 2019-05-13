@@ -24,10 +24,10 @@ exports.get = () => {
 	"DS": "Сотрудник Автошколы",
 	"GOV": "Сотрудник Правительствa",
 
-	"Yakuza": "Член мафии Yаkuzа",
 	"WMC": "Warlock MC",
 	"LCN": "La Cosa Nostra",
 	"RM": "Russian Mafia",
+	"Yakuza": "Член мафии Yakuza",
     });
     return tags;
 };
