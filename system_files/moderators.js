@@ -2,16 +2,17 @@ const Discord = require('discord.js');
 
 exports.getmod = () => {
     let moderators = [
-        'Модератор',
-        'Ст.Модератор'
+        "Leaders",
+        "Deputy Leaders",
     ];
     return moderators;
 }
 
 exports.getadmin = () => {
     let admins = [
-        'Администратор',
-        'Мл.Администратор'
+        "Discord Master",
+        "Technical Support Discord",
+        "Moderator",
     ];
     return admins;
 }
