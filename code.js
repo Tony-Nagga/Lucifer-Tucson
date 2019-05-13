@@ -100,7 +100,7 @@ const events = {
 bot.login(process.env.token); // Авторизация бота
 bot.on('ready', () => {
     console.log("Бот был успешно запущен!");
-    bot.user.setActivity('за Nagga', { type: 'WATCHING' }); // В активности будет: 'смотрит за сервером'
+    bot.user.setActivity('за сервером', { type: 'WATCHING' }); // В активности будет: 'смотрит за сервером'
     bot.user.setPresence({ status: 'dnd' }); // Статус будет 'Не беспокоить', статусы: 'online', 'idle', 'dnd', 'invisible'
     timer();
     get_support();
@@ -155,7 +155,7 @@ bot.on('message', async message => {
                 .addField("Отправлено с канала", `<#${message.channel.id}>`)
                 .addField("Причина снятия роли", `${collected.first().content}`)
                 .addField("Информация", `\`[✔] - снять роль\`\n` + `\`[❌] - отказать в снятии роли\`\n` + `\`[D] - удалить сообщение\``)
-                .setFooter("© Ха-ха-ха-ха, я пошутил.")
+                .setFooter("© Малой додик. by Malaya")
                 .setTimestamp()
                 reqchat.send(embed).then(async msgsen => {
                     answer.delete();
@@ -212,7 +212,7 @@ bot.on('message', async message => {
                 .addField("Роль для выдачи", `\`Роль для выдачи:\` <@&${role.id}>`)
                 .addField("Отправлено с канала", `<#${message.channel.id}>`)
                 .addField("Информация по выдачи", `\`[✔] - выдать роль\`\n` + `\`[❌] - отказать в выдачи роли\`\n` + `\`[D] - удалить сообщение\``)
-                .setFooter("© Ха-ха-ха-ха, я пошутил.")
+                .setFooter("© Малой додик. by Malaya")
                 .setTimestamp();
                 reqchat.send(embed).then(async msgsen => {
                     await msgsen.react('✔')
