@@ -24,10 +24,10 @@ exports.get = () => {
 	"DS",
 	"GOV",
 
-	"Yakuza",
 	"WMC",
 	"LCN",
 	"RM",
+	"Yakuza",
     ];
     return manytags;
 }
