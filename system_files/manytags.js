@@ -11,9 +11,9 @@ exports.get = () => {
 		"SFa",
 		"JLV",
 		
-		"CNN LS",
-		"CNN SF",
-		"CNN LV",
+		"MCLS",
+		"MCSF",
+		"MCLV",
 		
 		"CNN LS",
 		"CNN SF",
