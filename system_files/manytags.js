@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 exports.get = () => {
     let manytags = [
-        "LSPD",
+        	"LSPD",
 		"SFPD",
 		"RCSD",
 		"LVPD",
