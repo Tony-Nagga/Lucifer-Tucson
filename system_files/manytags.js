@@ -24,7 +24,7 @@ exports.get = () => {
 	"DS",
 	"GOV",
 
-	"Yakuza",
+	"Yаkuzа",
 	"WMC",
 	"LCN",
 	"RM"
