@@ -19,7 +19,7 @@ exports.get = () => {
 		"CBLS": "Сотрудник Банка LS",
 		"DS": "Сотрудник Автошколы",
 		"GOV": "Сотрудник Правительствa",
-		"Yak": "Yakuzа",
+		"Yakuza": "Якудза",
 		"WMC": "Warlock MC",
 		"LCN": "La Cosa Nostra",
 		"RM": "Russian Mafia",
