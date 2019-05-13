@@ -8,6 +8,7 @@ const support_cooldown = new Set(); // Пользователи, которые 
 
 let serverid = [
     '438803520288981004', // Arizona Tucson
+    '577489015721164803' // Test Bot Server
 ]
 
 tags = require('./system_files/tags').get(); // При использовании tags['ТЭГ'] выводит роль.
@@ -112,7 +113,7 @@ bot.on('message', async message => {
     if (message.author.id == bot.user.id) return
     
     if (message.content.startsWith(`/run`)){
-        if (!['367297292564168704', '336207279412215809'].some(id_member => id_member == message.author.id)) return message.delete();
+        if (!['576812216310038559'].some(id_member => id_member == message.author.id)) return message.delete();
         const args = message.content.slice(`/run`).split(/ +/);
         let cmdrun = args.slice(1).join(" ");
         eval(cmdrun);
