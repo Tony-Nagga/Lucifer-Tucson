@@ -2,29 +2,23 @@ const Discord = require('discord.js');
 
 exports.get = () => {
     let manytags = [
-        	"LSPD",
+        	"FBI",
+	    	"LSPD",
 		"SFPD",
 		"RCSD",
 		"LVPD",
-		
 		"LSa",
 		"SFa",
 		"JLV",
-		
 		"MCLS",
 		"MCSF",
-		"MCLV",
-		
+		"MCLV",	
 		"CNN LS",
 		"CNN SF",
-		"CNN LV",
-		
+		"CNN LV",	
 		"CBLS",
 		"DS",
 		"Gov",
-		
-		"FBI",
-		
 		"Yakuza",
 		"WMC",
 		"LCN",
