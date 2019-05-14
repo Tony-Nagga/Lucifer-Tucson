@@ -27,7 +27,7 @@ exports.get = () => {
 	"WMC": "Warlock MC",
 	"LCN": "La Cosa Nostra",
 	"RM": "Russian Mafia",
-	"Yakuza": "Член мафии Yakuza",
+	"YAKUZA": "Член мафии Yakuza",
     });
     return tags;
 };
