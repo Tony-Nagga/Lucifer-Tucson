@@ -8,8 +8,8 @@ exports.get = () => {
 	"RCSD": "Сотрудник RCSD",
 	"LVPD": "Сотрудник LVPD",
 
-	"LSa": "Военнослужащий LS",
-	"SFa": "Военнослужащий SF",
+	"LSA": "Военнослужащий LS",
+	"SFA": "Военнослужащий SF",
 	"JLV": "Надзиратель Jail LV",
 
 	"MCLS": "Мед. работник MCLS",
@@ -27,7 +27,7 @@ exports.get = () => {
 	"WMC": "Warlock MC",
 	"LCN": "La Cosa Nostra",
 	"RM": "Russian Mafia",
-	"YAKUZA": "Член мафии Yakuza",
+	"YAKUZA": "Yakuza",
     });
     return tags;
 };
