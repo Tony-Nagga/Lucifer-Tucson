@@ -54,42 +54,12 @@ async function get_support(){
     }
 }
 
-async function timer(){
-    setInterval(async () => {
-        let testbot_server = bot.guilds.get(serverid[0]);
-        let chandler_server = bot.guilds.get(serverid[1]);
-        let timer = testbot_server.channels.find(c => c.name == 'timer');
-        let anonem = testbot_server.channels.find(c => c.name == 'advertisement');
-        let general = testbot_server.channels.find(c => c.name == 'communication💬');
-        timer.fetchMessages({limit: 1}).then(async messages => {
-            if (messages.size < 1){
-                webhook.send(bot, timer, `\`Всего объявлений которые подал бот: 0\``, 'Timer', false, false);
-            }else{
-                let create_date = messages.first().createdAt.valueOf();
-                let date = new Date().valueOf();
-                let annonesments = messages.first().content.match(re)[0];
-                if (!annonesments){
-                    annonesments = 0;
-                }
-                let first_m = annonesments;
-                await anonem.fetchPinnedMessages().then(async pins => {
-                    pins.forEach(async pin => {
-                        let time = pin.content.match(re)[0];
-                        pin.content = pin.content.replace(`${time}`, '');
-                        if ((+date - create_date) > +time){
-                            await general.send(pin.content);
-                            annonesments = +annonesments + 1;
-                        }
-                    });
-                });
-                setTimeout(async () => {
-                    if (first_m < annonesments){
-                        webhook.send(bot, timer, `\`Всего объявлений которые подал бот: ${annonesments}\``, 'Timer', false, false);
-                    }
-                }, 3000);
-            }
-        });
-    }, 15000);
+function timer(){ 
+    setInterval(() => { 
+    let server = bot.guilds.get("serverid"); 
+    let channel = server.channels.find(c => c.name == "general");
+    channel.send("Привет, я Артем!"); 
+    }, 1000); // 1 секунда = 1000
 }
 
 const events = {
