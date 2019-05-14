@@ -60,7 +60,7 @@ async function timer(){
         let chandler_server = bot.guilds.get(serverid[1]);
         let timer = testbot_server.channels.find(c => c.name == 'timer');
         let anonem = testbot_server.channels.find(c => c.name == 'advertisement');
-        let general = testbot_server.channels.find(c => c.name == 'general');
+        let general = testbot_server.channels.find(c => c.name == 'communication💬');
         timer.fetchMessages({limit: 1}).then(async messages => {
             if (messages.size < 1){
                 webhook.send(bot, timer, `\`Всего объявлений которые подал бот: 0\``, 'Timer', false, false);
