@@ -22,7 +22,7 @@ exports.get = () => {
 	"Warlock MC",
 	"La Cosa Nostra",
 	"Russian Mafia",
-	"Член мафии Yakuza"
+	"Yakuza"
     ]
     return rolesgg;
 }
