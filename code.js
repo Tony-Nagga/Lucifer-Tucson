@@ -11,7 +11,6 @@ let serverid = [
     '577489015721164803' // Test Bot Server
 ]
 
-require('./system_files/family').run(bot, message); // Семья
 tags = require('./system_files/tags').get(); // При использовании tags['ТЭГ'] выводит роль.
 let manytags = require('./system_files/manytags').get(); // При использовании manytags[0] выведет первый ТЭГ.
 let rolesgg = require('./system_files/rolesgg').get(); // При использовании rolesgg[0] выведет первую роль.
