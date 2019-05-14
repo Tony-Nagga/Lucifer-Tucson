@@ -56,11 +56,11 @@ async function get_support(){
 
 async function timer(){
     setInterval(async () => {
-        let data_server = bot.guilds.get(serverid[0]);
+        let testbot_server = bot.guilds.get(serverid[0]);
         let chandler_server = bot.guilds.get(serverid[1]);
-        let timer = data_server.channels.find(c => c.name == 'timer');
-        let anonem = chandler_server.channels.find(c => c.name == 'advertisement');
-        let general = chandler_server.channels.find(c => c.name == '🌏общение');
+        let timer = testbot_server.channels.find(c => c.name == 'timer');
+        let anonem = testbot_server.channels.find(c => c.name == 'advertisement');
+        let general = testbot_server.channels.find(c => c.name == 'основной');
         timer.fetchMessages({limit: 1}).then(async messages => {
             if (messages.size < 1){
                 webhook.send(bot, timer, `\`Всего объявлений которые подал бот: 0\``, 'Timer', false, false);
