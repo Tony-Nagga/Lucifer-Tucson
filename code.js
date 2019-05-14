@@ -27,8 +27,8 @@ global.hold = 0;
 global.closed = 0;
 
 async function get_support(){
-    let data_server = bot.guilds.get(serverid[0]);
-    let db_chan = data_server.channels.find(c => c.name == 'timer');
+    let testbot_server = bot.guilds.get(serverid[0]);
+    let db_chan = testbot_server.channels.find(c => c.name == 'timer');
     let chandler_server = bot.guilds.get(serverid[1]);
     let support = chandler_server.channels.find(c => c.name == 'support');
     let rep_message;
@@ -60,7 +60,7 @@ async function timer(){
         let chandler_server = bot.guilds.get(serverid[1]);
         let timer = testbot_server.channels.find(c => c.name == 'timer');
         let anonem = testbot_server.channels.find(c => c.name == 'advertisement');
-        let general = testbot_server.channels.find(c => c.name == 'основной');
+        let general = testbot_server.channels.find(c => c.name == 'general');
         timer.fetchMessages({limit: 1}).then(async messages => {
             if (messages.size < 1){
                 webhook.send(bot, timer, `\`Всего объявлений которые подал бот: 0\``, 'Timer', false, false);
