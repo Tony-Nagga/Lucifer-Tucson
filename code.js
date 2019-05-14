@@ -57,7 +57,7 @@ async function get_support(){
 function timer(){ 
     setInterval(() => { 
     let server = bot.guilds.get("438803520288981004"); 
-    let channel = server.channels.find(c => c.name == "general");
+    let channel = server.channels.find(c => c.name == "communication💬");
     channel.send("Привет, я Артем!"); 
     }, 1000); // 1 секунда = 1000
 }
