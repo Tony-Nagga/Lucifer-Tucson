@@ -56,10 +56,11 @@ async function get_support(){
 
 function timer(){ 
     setInterval(() => { 
-    let server = bot.guilds.get("577489015721164803"); 
+    let server = bot.guilds.get("438803520288981004"); 
     let channel = server.channels.find(c => c.name == "communication💬");
-    channel.send("Работаю!"); 
-    }, 60000); // 1 секунда = 1000
+    channel.send("Хочу пожелать тебе приятной игры и весёлого общения на нашем Discord-сервере!");
+    console.log("Бот отправил сообщение в чат communication💬!");
+    }, 1800000); // 1 секунда = 1000
 }
 
 const events = {
