@@ -54,16 +54,7 @@ async function get_support(){
     }
 }
 
-function timer(){ 
-    setInterval(() => { 
-    let server = bot.guilds.get("438803520288981004"); 
-    let channel = server.channels.find(c => c.name == "communication💬");
-    channel.send("Хочу пожелать тебе приятной игры и весёлого общения на нашем Discord-сервере!");
-    console.log("Бот отправил сообщение в чат communication💬!");
-    }, 1800000); // 1 секунда = 1000
-}
-
-function timer2(){ 
+function timerr(){ 
     setInterval(() => { 
     let server = bot.guilds.get("438803520288981004"); 
     let channel = server.channels.find(c => c.name == "requests-for-roles");
@@ -71,8 +62,15 @@ function timer2(){
     channel.send("** [Галочка] - выдать роль **");
     channel.send("** [Крестик] - забрать роль **");
     channel.send("** [D] - удалить баганный запрос **");
-    console.log("Бот отправил сообщение в чат requests-for-roles!");
-    }, 30000); // 1 секунда = 1000
+    }, 5000); // 1 секунда = 1000
+}
+
+function timer(){ 
+    setInterval(() => { 
+    let server = bot.guilds.get("438803520288981004"); 
+    let channel = server.channels.find(c => c.name == "communication💬");
+    channel.send("Хочу пожелать тебе приятной игры и весёлого общения на нашем Discord-сервере!");
+    }, 1800000); // 1 секунда = 1000
 }
 
 const events = {
