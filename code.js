@@ -54,17 +54,6 @@ async function get_support(){
     }
 }
 
-function timerr(){ 
-    setInterval(() => { 
-    let server = bot.guilds.get("438803520288981004"); 
-    let channel = server.channels.find(c => c.name == "requests-for-roles");
-    channel.send("Хэй работяга! Тебе открыта новая возможность выдавать роли! Как это работает? Я буду кидать сюда формы, которые ты будешь или принимать, или отклонять. Внимательно смотри на имя, кто запрашивает роль(составлена ли она по форме) и на роль, которая будет выдана. Есть возникли вопросы - отпиши Discord Master'у!");
-    channel.send("** [Галочка] - выдать роль **");
-    channel.send("** [Крестик] - забрать роль **");
-    channel.send("** [D] - удалить баганный запрос **");
-    }, 5000); // 1 секунда = 1000
-}
-
 function timer(){ 
     setInterval(() => { 
     let server = bot.guilds.get("438803520288981004"); 
