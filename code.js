@@ -83,6 +83,7 @@ bot.on('message', async message => {
     if (!serverid.some(id_of_server => id_of_server == message.guild.id)) return
     if (message.type === "PINS_ADD") if (message.channel.name == "requests-for-roles" || message.channel.name == "advertisement") message.delete();
     if (message.content == "Привет, Lucifer.") return message.reply("`привет! Рад тебя видеть.`") && console.log(`Поздаровался с ${message.member.displayName}.`)
+    if (message.content == "Ладно, пока, Lucifer.") return message.reply("`до встречи! Не забывай заходить.`") && console.log(`Попращался с ${message.member.displayName}.`)
     if (message.author.id == bot.user.id) return
     
     if (message.content.startsWith(`/run`)){
