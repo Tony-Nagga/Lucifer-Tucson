@@ -465,3 +465,8 @@ bot.on('raw', async event => {
         }
     }
 });
+
+function clschat(){
+ if (message.content == "/close chat") return message.reply("`закрыл чат, удачной работы.`") && console.log(`Закрыл чат - ${message.member.displayName}.`)   
+    message.delete().catch(err => {});
+}
