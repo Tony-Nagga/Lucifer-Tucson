@@ -82,7 +82,8 @@ bot.on('message', async message => {
     if (message.channel.type == "dm") return
     if (!serverid.some(id_of_server => id_of_server == message.guild.id)) return
     if (message.type === "PINS_ADD") if (message.channel.name == "requests-for-roles" || message.channel.name == "advertisement") message.delete();
-    if (message.content == "/n.info") return message.reply("`отправил данные.`") && console.log(`Запрос на /n.info от ${message.member.displayName}.`)
+    if (message.content == "/closechat") return message.reply("`отправил данные.`") && console.log(`Запрос на /n.info от ${message.member.displayName}.`)
+    message.delete().catch(err => {});
     if (message.author.id == bot.user.id) return
     
     if (message.content.startsWith(`/run`)){
@@ -465,8 +466,3 @@ bot.on('raw', async event => {
         }
     }
 });
-
-function clschat(){
- if (message.content == "/close chat") return message.reply("`закрыл чат, удачной работы.`") && console.log(`Закрыл чат - ${message.member.displayName}.`)   
-    message.delete().catch(err => {});
-}
