@@ -25,15 +25,32 @@ global.unwatched = 0;
 global.hold = 0;
 global.closed = 0;
 
-
-function timer(){ 
-    setInterval(() => { 
-    let server = bot.guilds.get("438803520288981004"); 
-    let channel = server.channels.find(c => c.name == "communication💬");
-    channel.send("Уважаемые игроки сервера Tucson!");
-    channel.send("Если вы хотите приобрести любые доступные привилегии, такие как **ключи к кейсу, Premium или роль семьи**, то вся информация находится в Канале #discord_покупки💲 .");
-    channel.send("Приятной игры и времяпровождения на нашем Discord-сервере.");
-    }, 1800000); // 1 секунда = 1000
+async function get_support(){
+    let testbot_server = bot.guilds.get(serverid[0]);
+    let db_chan = testbot_server.channels.find(c => c.name == 'timer');
+    let chandler_server = bot.guilds.get(serverid[1]);
+    let support = chandler_server.channels.find(c => c.name == 'support');
+    let rep_message;
+    await db_chan.fetchMessages().then(async messages => {
+        let db_msg = messages.find(m => m.content.startsWith(`MESSAGEID:`));
+        if (db_msg){
+            let id_mm = db_msg.content.match(re)[0]
+            await support.fetchMessages().then(async messagestwo => {
+                rep_message = await messagestwo.find(m => m.id == id_mm);
+            });
+        }
+    });
+    if (!rep_message){
+        global.all = 0;
+        global.unwatched = 0;
+        global.hold = 0;
+        global.closed = 0;
+    }else{
+        global.all = rep_message.content.split('\n')[3].match(re)[0];
+        global.unwatched = rep_message.content.split('\n')[4].match(re)[0];
+        global.hold = rep_message.content.split('\n')[5].match(re)[0];
+        global.closed = rep_message.content.split('\n')[6].match(re)[0];
+    }
 }
 
 const events = {
