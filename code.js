@@ -73,7 +73,7 @@ bot.login(process.env.token); // Авторизация бота
 bot.on('ready', () => {
     console.log("Бот был успешно запущен!");
     bot.user.setActivity('за сервером', { type: 'WATCHING' }); // В активности будет: 'смотрит за сервером'
-    bot.user.setPresence({ status: 'dnd' }); // Статус будет 'Не беспокоить', статусы: 'online', 'idle', 'dnd', 'invisible'
+    bot.user.setPresence({ status: 'online' }); // Статус будет 'Не беспокоить', статусы: 'online', 'idle', 'dnd', 'invisible'
     timer();
     get_support();
 });
