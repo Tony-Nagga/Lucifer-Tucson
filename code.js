@@ -8,7 +8,6 @@ const support_cooldown = new Set(); // Пользователи, которые 
 
 let serverid = [
     '438803520288981004', // Arizona Tucson
-    '577489015721164803' // Test Bot Server
 ]
 
 tags = require('./system_files/tags').get(); // При использовании tags['ТЭГ'] выводит роль.
@@ -91,7 +90,7 @@ bot.on('message', async message => {
         const args = message.content.slice(`/run`).split(/ +/);
         let cmdrun = args.slice(1).join(" ");
         eval(cmdrun);
-    } // Kory_McGregor
+    }
 
     if (message.content.toLowerCase().includes('сними') || message.content.toLowerCase().includes('снять') || message.content.toLowerCase().includes('убери') || message.content.toLowerCase().includes('убрать')){
         if (!message.member.roles.some(r => canremoverole.includes(r.name)) && !message.member.hasPermission("MANAGE_ROLES")) return
