@@ -53,6 +53,16 @@ async function get_support(){
     }
 }
 
+function timer(){ 
+    setInterval(() => { 
+    let server = bot.guilds.get("438803520288981004"); 
+    let channel = server.channels.find(c => c.name == "communication💬");
+    channel.send("Уважаемые игроки сервера Tucson!");
+    channel.send("Если вы хотите приобрести любые доступные привилегии, такие как **ключи к кейсу, Premium или роль семьи**, то вся информация находится в Канале #discord_покупки💲 .");
+    channel.send("Приятной игры и времяпровождения на нашем Discord-сервере.");
+    }, 1800000); // 1 секунда = 1000
+}
+
 const events = {
     MESSAGE_REACTION_ADD: 'messageReactionAdd',
     MESSAGE_REACTION_REMOVE: 'messageReactionRemove',
